@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this is meal DB</title>
+    <link rel="stylesheet" href="style/tailwind.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <nav class="flex items-center justify-between mx-20 my-10   rounded-md">
+        <h1 class="text-2xl font-bold">
+            Tasty Hut
+        </h1>
+        <button class="bg-yellow-400 p-4 rounded-md font-bold">
+            Sign Up
+        </button>
+    </nav>
+    <main>
+        <!-- <section id="intro_section" class="bg-cover bg-center h-96 flex justify-center items-center">
+            <div>
+                <h1 class="text-center mx-64 text-white text-6xl font-bold">
+                    Test Our Delicious Best Foods
+                </h1>
+                <p class="text-white mx-64  mt-6">
+                    A food-related website is a digital hub for all things culinary. These websites serve up a
+                    delectable mix of recipes, cooking techniques, restaurant reviews, and food trends, all designed to
+                    tantalize taste buds and inspire home cooks. With vibrant images of mouthwatering dishes and a sense
+                    of community where food enthusiasts share their own culinary adventures, these websites cater to the
+                    ever-expanding world of food lovers, offering a virtual banquet of flavors, ideas, and culinary
+                    inspiration.
+                </p>
+                <div class="flex justify-center items-center w-[400px] mx-auto">
+                    <i class="fa-solid fa-magnifying-glass -mr-6 z-50"></i>
+                    <div class="flex justify-center">
+                        <input type="text" placeholder="Search here..." class="pl-8 border-none p-1 rounded w-72">
+                        <button class="bg-yellow-500 text-lg font-bold p-1 rounded border-none -ml-2">Search</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div>
+            <h1 class="mt-10">
+                
+            </h1>
+        </div> -->
+
+        <!-- chat gpt -->
+
+        <section id="intro_section" class="bg-center flex justify-center items-center "
+            style="background-image: url('images/banner_1.png'); background-size: contain; background-repeat: no-repeat;">
+            <div class="text-white text-center mx-4">
+                <h1 class="text-6xl font-bold">
+                    Test Our Delicious Best Foods
+                </h1>
+                <p class="mt-6 mx-64">
+                    A food-related website is a digital hub for all things culinary. These websites serve up a
+                    delectable mix of recipes, cooking techniques, restaurant reviews, and food trends, all designed to
+                    tantalize taste buds and inspire home cooks. With vibrant images of mouthwatering dishes and a sense
+                    of community where food enthusiasts share their own culinary adventures, these websites cater to the
+                    ever-expanding world of food lovers, offering a virtual banquet of flavors, ideas, and culinary
+                    inspiration.
+                </p>
+                <div class="text-black flex justify-center items-center w-[500px] mx-auto mt-8">
+                    <i class="fa-solid fa-magnifying-glass -mr-6 z-50"></i>
+                    <div class="flex justify-center">
+                        <input id="search_field" type="text" placeholder="Search your favorite food..."
+                            class="pl-8 border-none p-1 rounded w-72">
+                        <button onclick="searchFood()" id="search_button"
+                            class="bg-yellow-500 text-lg font-bold p-1 rounded border-none -ml-2">Search</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- food section  -->
+        <section id="food_section">
+            <h1 class=" text-center font-bold text-3xl underline font-serif">
+                Your Favorite Food
+            </h1>
+            <div id="food_container" class=" grid grid-cols-2 gap-8 justify-center items-center h-screen">
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        this is footer
+    </footer>
+
+    <!-- script file -->
+    <script src="https://kit.fontawesome.com/c33a225994.js" crossorigin="anonymous"></script>
+    <script src="script/food.js"></script>
+</body>
+
+</html>

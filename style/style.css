@@ -1,0 +1,6 @@
+#intro_section{
+    background-image: url(../images/banner_1.png);
+    min-height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
