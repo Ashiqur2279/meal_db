@@ -15,18 +15,41 @@ function loadFood(foodName) {
 }
 
 //step 02: click search btn for search food
-const searchFood = () => {
-    const searchValue = document.getElementById('search_field').value;
+// document.getElementById('search_button').addEventListener('click', function searchFood() {
+//     console.log('btn clicked');
+//     const searchField = document.getElementById('search_filed');
+//     console.log(searchField);
+//     const searchValue = searchField.value;
+//     console.log(searchValue);
+//     const foodName = searchValue;
+//     loadFood(foodName);
+//     searchField.value = '';
+// }
+// )
+
+//search btn
+document.getElementById('search_button').addEventListener('click', searchFood);
+
+function searchFood() {
+    const searchField = document.getElementById('search_field');
+    const searchValue = searchField.value;
     console.log(searchValue);
     const foodName = searchValue;
     loadFood(foodName);
-}
+    searchField.value = '';
+  }
+  
+  
 
 //step 03: show foods
 const showFoods = foods => {
     console.log(foods);
 
-    
+    //get the container
+    const foodContainer = document.getElementById('food_container');
+
+    foodContainer.innerHTML = '';
+
     //get the per food data
     for (const food of foods) {
         console.log(food);
@@ -36,18 +59,14 @@ const showFoods = foods => {
         const foodImg = food.strMealThumb;
         const foodLink = food.strSource;
         const foodYoutube = food.strYoutube;
-        
-        //get the container
-        const foodContainer = document.getElementById('food_container');
-        document.getElementById("food_img").style.padding = "50px 10px 20px 30px";
-document.getElementById("food_data").style.margin = "50px 10px 20px 30px";
+
         //create the card
         const card = document.createElement('div');
         card.className = 'flex space-x-4 w-1/2 bg-white rounded-lg shadow-lg p-4 mx-8';
         //card html 
         card.innerHTML = `
-        <img id="food_img" class="w-96 rounded-lg h-96" src="${foodImg}">
-        <div id="food_data" class="w-full">
+        <img id="" class=" food_img w-96 rounded-lg h-96" src="${foodImg}">
+        <div id="" class="food_data w-full">
         <h1 class="text-2xl font-bold ms-4">${foodName}</h1>
         <h1>Country: ${foodCountry}</h1>
         <p>Food Id: ${foodId}</p>
@@ -56,6 +75,21 @@ document.getElementById("food_data").style.margin = "50px 10px 20px 30px";
         `
         //append the card
         foodContainer.appendChild(card)
+
+        // document.getElementsByClassName("food_img").style.padding = "50px 10px 20px 30px";
+        // document.getElementsByClassName("food_data").style.margin = "50px 10px 20px 30px";
+        // console.log(object);
+
+        var foodImgElements = document.getElementsByClassName("food_img");
+        for (var i = 0; i < foodImgElements.length; i++) {
+            foodImgElements[i].style.padding = "50px 10px 20px 30px";
+        }
+
+        var foodDataElements = document.getElementsByClassName("food_data");
+        for (var i = 0; i < foodDataElements.length; i++) {
+            foodDataElements[i].style.margin = "50px 10px 20px 30px";
+        }
+
     }
 }
 
