@@ -4,7 +4,7 @@ console.log('js file is connected');
 
 function loadFood(foodName) {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${foodName}`
-    console.log(url);
+    // console.log(url);
     try {
         fetch(url)
             .then(res => res.json())
@@ -37,13 +37,13 @@ function searchFood() {
     const foodName = searchValue;
     loadFood(foodName);
     searchField.value = '';
-  }
-  
-  
+}
+
+
 
 //step 03: show foods
 const showFoods = foods => {
-    console.log(foods);
+    // console.log(foods);
 
     //get the container
     const foodContainer = document.getElementById('food_container');
@@ -52,7 +52,7 @@ const showFoods = foods => {
 
     //get the per food data
     for (const food of foods) {
-        console.log(food);
+        // console.log(food);
         const foodId = food.idMeal
         const foodName = food.strMeal;
         const foodCountry = food.strArea;
@@ -70,7 +70,7 @@ const showFoods = foods => {
         <h1 class="text-2xl font-bold ms-4">${foodName}</h1>
         <h1>Country: ${foodCountry}</h1>
         <p>Food Id: ${foodId}</p>
-        <btn class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 mt-4">Details</btn>
+        <btn class=" details_btn rounded-lg">Details</btn>
         </div>
         `
         //append the card
@@ -88,6 +88,24 @@ const showFoods = foods => {
         var foodDataElements = document.getElementsByClassName("food_data");
         for (var i = 0; i < foodDataElements.length; i++) {
             foodDataElements[i].style.margin = "50px 10px 20px 30px";
+        }
+        /* var detailsBtnElements = document.getElementsByClassName('details_btn');
+        for (var i = 0; i < detailsBtnElements.length; i++){
+            detailsBtnElements[i].style.margin = "8px 0px";
+            detailsBtnElements[i].style.padding = "5px 8px";
+            detailsBtnElements[i].style.backgroundColor = "blue";
+            detailsBtnElements[i].style.color = "white";
+            detailsBtnElements[i].style.cursor = "pointer";
+        } */
+
+        var detailsBtnElements = document.getElementsByClassName('details_btn');
+
+        for (var element of detailsBtnElements) {
+            element.style.margin = "8px 0px";
+            element.style.padding = "5px 8px";
+            element.style.backgroundColor = "blue";
+            element.style.color = "white";
+            element.style.cursor = "pointer";
         }
 
     }
